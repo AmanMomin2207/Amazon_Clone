@@ -34,7 +34,6 @@ export function addTocart(productId) {
             quantity: 1
         });
     }
-
     saveToStorage();
 }
 
@@ -48,6 +47,5 @@ export function removeFromCart(productId) {
     });
 
     cart = newCart;
-
     saveToStorage();
 }
