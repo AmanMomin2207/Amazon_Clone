@@ -14,8 +14,17 @@
   margin-right: auto;
 }
 
-input {
+.quantity-input {
   width: 30px;
+  display: none;
+}
+
+.save-quantity-link{
+  display: none;
+}
+
+.is-editing-quantity .save-quantity-link {
+  display: initial;
 }
 
 .page-title {
