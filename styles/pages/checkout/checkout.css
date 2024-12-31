@@ -23,10 +23,13 @@
   display: none;
 }
 
-.is-editing-quantity .save-quantity-link {
+.is-editing-quantity .quantity-input {
   display: initial;
 }
 
+.is-editing-quantity .save-quantity-link {
+  display: initial;
+}
 .page-title {
   font-weight: 700;
   font-size: 22px;
