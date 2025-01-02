@@ -70,7 +70,7 @@ class Clothing extends Product{
 //   b: this.a
 // };
 
-// logThis();
+// logThis(); 
 // logThis.call('hello');
 
 // function logThis() {
