@@ -7,20 +7,42 @@ import { loadCart } from "../data/cart.js";
 // import '../data/car.js';
 //import '../data/cart-class.js';
 
-Promise.all([
-    loadProductsFetch(),
-    new Promise((resolve) => {
-        loadCart(() => {
-            resolve();
-        });
-    })
 
-]).then((values) => {
-    console.log(values); 
+async function loadPage() {
+
+    await loadProductsFetch();
+    
+    const value = await new Promise((resolve) => {
+        loadCart(() => {
+            resolve('value 2');
+        });
+    });
+
+    console.log(value);
+
     renderCheckoutHeader();
     renderPaymentSummary();
     renderOrderSummary();
-});
+
+}
+
+loadPage();
+
+
+// Promise.all([
+//     loadProductsFetch(), 
+//     new Promise((resolve) => {
+//         loadCart(() => {
+//             resolve();
+//         });
+//     })
+
+// ]).then((values) => {
+//     console.log(values); 
+//     renderCheckoutHeader();
+//     renderPaymentSummary();
+//     renderOrderSummary();
+// });
 
 // new Promise((resolve) => {
 //     loadProducts(() => {
